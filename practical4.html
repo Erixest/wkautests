@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            text-align: center;
+        }
+        #google-search-button {
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .advanced-search {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 20px;
+        }
+        .advanced-search label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .advanced-search input[type="text"] {
+            width: 300px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .advanced-search #advanced-search-button {
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<form action="https://www.google.com/search">
+    <input type="text" name="q">
+    <input type="submit" id="google-search-button" value="Google Search">
+</form>
+<form action="https://www.google.com/search" style="display: none;">
+    <input type="text" name="q">
+    <input type="submit" id="google-search-button" value="Google Search (Images)">
+</form>
+<form class="advanced-search" action="https://www.google.com/advanced_search">
+    <label for="all-words">Найти страницы с… "всеми этими словами:"</label>
+    <input type="text" name="q">
+    <label for="exact-phrase">Найти страницы с… "это точное слово или фраза:"</label>
+    <input type="text" name="as_epq">
+    <label for="any-words">Найти страницы с… "любым из этих слов:"</label>
+    <input type="text" name="as_oq">
+    <label for="none-words">Найти страницы с… "ни одним из этих слов:"</label>
+    <input type="text" name="as_eq">
+    <input type="submit" id="advanced-search-button" value="Расширенный поиск">
+</form>
+<a href="https://www.google.com/search?q=" id="lucky-button">Мне повезет</a>
+</body>
+</html>
